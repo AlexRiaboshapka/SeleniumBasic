@@ -20,6 +20,7 @@ public class BaseTest {
         driver.get("https://the-internet.herokuapp.com/");
         CustomLogger.logger.info(driver.getTitle());
         driver.manage().window().maximize();
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         //driver.manage().window().setSize(new Dimension(390, 844));
         mainPage = new MainPage(driver);
     }

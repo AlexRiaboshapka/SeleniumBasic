@@ -6,10 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 public class HoversPage {
-    private WebDriver driver;
-
     private final By figureBox = By.className("figure");
     private final By boxCaption = By.className("figcaption");
+    private WebDriver driver;
 
 
     public HoversPage(WebDriver driver) {
@@ -29,8 +28,8 @@ public class HoversPage {
 
     public class FigureCaption {
         private WebElement caption;
-        private By header = By.tagName("h5");
-        private By link = By.tagName("a");
+        private final By header = By.tagName("h5");
+        private final By link = By.tagName("a");
 
         public FigureCaption(WebElement caption) {
             this.caption = caption;
@@ -50,7 +49,6 @@ public class HoversPage {
 
         public String getLinkText() {
             return caption.findElement(link).getText();
-
         }
     }
 }

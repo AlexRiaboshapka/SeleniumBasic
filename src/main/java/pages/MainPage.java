@@ -49,4 +49,9 @@ public class MainPage {
         clickLink("WYSIWYG Editor");
         return new EditorPage(driver);
     }
+
+    public DynamicLoadPage clickDynamicLoadingLink() {
+        clickLink("Dynamic Loading");
+        return new DynamicLoadPage(driver);
+    }
 }
