@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class MainPage {
-
     private WebDriver driver;
 
     public MainPage(WebDriver driver) {
@@ -53,5 +52,20 @@ public class MainPage {
     public DynamicLoadPage clickDynamicLoadingLink() {
         clickLink("Dynamic Loading");
         return new DynamicLoadPage(driver);
+    }
+
+    public LargeDomPage clickLargeDomLink() {
+        clickLink("Large & Deep DOM");
+        return new LargeDomPage(driver);
+    }
+
+    public InfiniteScrollPage clickInfiniteScrollLink() {
+        clickLink("Infinite Scroll");
+        return new InfiniteScrollPage(driver);
+    }
+
+    public MultipleWindowsPage clickMultipleWindowsLink() {
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
     }
 }

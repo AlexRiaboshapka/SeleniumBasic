@@ -1,8 +1,10 @@
 package dropdown;
 
 import base.BaseTest;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DropDownTests extends BaseTest {
 
@@ -13,8 +15,7 @@ public class DropDownTests extends BaseTest {
         String option = "Option 1";
         dropDownPage.selectFromDropDown(option);
         var selectOptions = dropDownPage.getSelectedOption();
-        Assertions.assertEquals(selectOptions.size(), 1);
-        Assertions.assertTrue(selectOptions.contains(option));
-
+        assertEquals(selectOptions.size(), 1);
+        assertTrue(selectOptions.contains(option));
     }
 }

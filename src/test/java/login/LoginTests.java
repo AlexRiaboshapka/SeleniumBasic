@@ -2,11 +2,12 @@ package login;
 
 import base.BaseTest;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 import pages.LoginPage;
 import pages.SecureArea;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class LoginTests extends BaseTest {
     protected LoginPage loginPage;
     protected SecureArea secureArea;
